@@ -58,7 +58,6 @@ body {
    margin-bottom: 11px;
    border: none;
    background: none;
-   
 }
 .header__nav__div--prorecope {
     width: 20%;
@@ -72,8 +71,6 @@ body {
 .header__nav__div--prorecope a {
     color: #575656;
 }
-
-
 .div--carrousel img {
     margin-top: 15px ;
     width: 100%;
