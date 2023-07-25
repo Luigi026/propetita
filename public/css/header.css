@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+}
+a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #000;
+}
+body {
+    background-color: #e2d0ea;
+}
+.header {
+    background-color: #c46607;
+    padding-bottom: 10px;
+}
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.header__nav__div--logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header__nav__div--logo img {
+    width: 23%;
+    border-radius: 50%;
+    border: 1px solid #666;
+    margin: 10px;
+}
+.header__nav__div--input {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+}
+.header__nav__div--input input {
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    margin-bottom: 15px;
+}
+.header__nav__div--input i {
+    border-left: 1px solid #ebebeb;
+    padding: 7px;
+}
+.header__nav__div--input button {
+   margin-left: -30px;
+   margin-bottom: 11px;
+   border: none;
+   background: none;
+   
+}
+.header__nav__div--prorecope {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #e2d0ea;
+    padding: 5px 37px;
+    border-radius: 8px;
+}
+.header__nav__div--prorecope a {
+    color: #575656;
+}
+
+
+.div--carrousel img {
+    margin-top: 15px ;
+    width: 100%;
+    border-radius: 25px;
+}
