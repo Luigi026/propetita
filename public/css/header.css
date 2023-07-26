@@ -28,7 +28,7 @@ body {
     justify-content: center;
 }
 .header__nav__div--logo img {
-    width: 23%;
+    width: 35%;
     border-radius: 50%;
     border: 1px solid #666;
     margin: 10px;
@@ -41,7 +41,7 @@ body {
 .header__nav__div--input input {
     width: 80%;
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
     outline: none;
     font-size: 15px;
     padding: 8px;
@@ -58,6 +58,7 @@ body {
    margin-bottom: 11px;
    border: none;
    background: none;
+   
 }
 .header__nav__div--prorecope {
     width: 20%;
@@ -66,13 +67,14 @@ body {
     justify-content: center;
     background-color: #e2d0ea;
     padding: 5px 37px;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 .header__nav__div--prorecope a {
     color: #575656;
+    font-size: 12px;
 }
 .div--carrousel img {
-    margin-top: 15px ;
+    margin: 15px auto;
     width: 100%;
     border-radius: 25px;
 }
