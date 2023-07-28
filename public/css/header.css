@@ -15,6 +15,7 @@ body {
 .header {
     background-color: #c46607;
     padding-bottom: 10px;
+    
 }
 .header__nav {
     display: flex;
@@ -23,9 +24,7 @@ body {
     flex-direction: row;
 }
 .header__nav__div--logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 .header__nav__div--logo img {
     width: 35%;
@@ -76,5 +75,5 @@ body {
 .div--carrousel img {
     margin: 15px auto;
     width: 100%;
-    border-radius: 25px;
+    background: none;
 }
