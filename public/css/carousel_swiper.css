@@ -1,14 +1,15 @@
 
-html,body {
+html,
+body {
       position: relative;
       height: 100%;
     }
-.swiper {
+    .swiper {
       width: 100%;
       height: 100%;
     }
 
-.swiper-slide {
+    .swiper-slide {
       text-align: center;
       font-size: 18px;
       background: #fff;
@@ -16,10 +17,16 @@ html,body {
       justify-content: center;
       align-items: center;
     }
-.swiper-slide img {
+    .swiper-slide img {
       display: block;
       width: 100%;
       height: 350%;
       object-fit: cover;
     }   
+    .mySwiper2 .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }       
           
