@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "name" : "Picantes",
+        "image" : null
+    },
+    {
+        "id" : 2,
+        "name" : "Chichas",
+        "image" : null
+    },
+    {
+        "id" : 3,
+        "name" : "Platos",
+        "image" : null
+    }
+]
