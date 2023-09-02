@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync } = require('fs');
+/* const { readFileSync, writeFileSync } = require('fs');
 const path = require('path');
 
 module.exports = {
@@ -9,4 +9,4 @@ module.exports = {
         writeFileSync(path.join(__dirname, file), JSON.stringify(array, null, 3), 'utf-8')
         return null
     }
-}
+} */

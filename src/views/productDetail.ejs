@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
+<%- include('partials/head'/* ,{title: name} */) %>
 <body>
   <%- include('partials/header') %>
-    <main>
-      <article class="main__section__article">
-        <img src="/img/119047560_123870872509637_2988998959033757686_n.jpg" alt="">
-        <div>
-            <h2>$1000</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="main__section__article__div--buttons">
-            <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-            <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-        </div>
-    </article>
-    </main>
+    <!-- product detail -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Detalle del producto: <%= name %></h2>
+			</div>
+		</div>
+		<div class="product-detail">
+			<div class="row">
+				<div class="col-12 col-lg-8">
+					<img src="/img/products/<%= image || 'default-image.png'%>" alt="product image" class="product-detail-img">
+					<p class="product-detail-description">
+						<%= description %>
+					</p>
+				</div>
+				<div class="col-12 col-lg-4">
+					<article class="product-detail-info">
+						<h2 class="product-detail-title"><%= name %></h2>
+						<% if (discount) { %>
+							<p class="product-detail-price small">
+								<span>$<%=toThousand(price) %></span>
+								/
+								<b><%= discount %>% OFF</b>
+							</p>
+							<p class="product-detail-price">
+								$<%= toThousand(price - (price * discount / 100).toFixed(0)) %>
+							</p>
+						<% }else{ %>
+							
+							<p class="product-detail-price">
+								$ <%= toThousand(price) %>
+							</p>
+						<% } %>
+
+						<ul class="actions-list">
+							<li>
+								<i class="fas fa-credit-card"></i>
+								<p>Pagá en 12 cuotas sin interes</p>
+							</li>
+							<li>
+								<i class="fas fa-store"></i>
+								<p>Retiro gratis en locales del vendedor</p>
+							</li>
+						</ul>
+
+						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
+						<hr>
+
+						<a href="/products/edit/<%= id %>" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/delete/<%= id %>?_method=DELETE" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /product detail -->
 </body>

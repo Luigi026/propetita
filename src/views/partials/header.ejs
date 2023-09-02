@@ -4,23 +4,30 @@
             <a href="/"><img src="/img/logopetita.jpg" alt="logo petita"></a>
         </div>
         <div class="header__nav__div--input">
-            <input placeholder="¿Que buscas?" type="text">
-            <button><i class="fa-solid fa-magnifying-glass"></i><a href=""></a></button>
+            <form action="/search" method="GET">
+                <input placeholder="¿Que buscas?" name="keywords" type="text">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i><a href=""></a></button>
+            </form>
+        </div>
+
+        <!-- <div class="col-7 col-md-6">
+            <form action="/search" method="GET" class="search-form">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </form>
+        </div> -->
+
+        <div class="header__nav__div--prorecope">
+            <i class="fa-solid fa-store"></i><a href="/products">Productos</a>
         </div>
         <div class="header__nav__div--prorecope">
-            <i class="fa-solid fa-store"></i><a href="">Productos</a>
+            <i class="fa-solid fa-pen-to-square"></i><a href="">vender</a>
         </div>
         <div class="header__nav__div--prorecope">
-            <i class="fa-solid fa-pen-to-square"></i><a href="">recetas</a>
-        </div>
-        <div class="header__nav__div--prorecope">
-            <i class="fa-solid fa-face-smile"></i><a href="/admin">admin</a>
+            <i class="fa-solid fa-face-smile"></i><a href="/products/create">admin</a>
         </div>
         <div class="header__nav__div--prorecope">
             <i class="fa-solid fa-truck-fast"></i><a href="">pedidos</a>
         </div>
-        <!-- div class="header__nav__div--prorecope">
-            <i class="fa-solid fa-truck-fast"></i><a href="">admin</a>
-        </div> -->
     </nav>
 </header>

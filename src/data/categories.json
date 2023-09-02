@@ -1,17 +1,17 @@
 [
     {
         "id" : 1,
-        "name" : "Picantes",
+        "name" : "especias",
         "image" : null
     },
     {
         "id" : 2,
-        "name" : "Chichas",
+        "name" : "platos",
         "image" : null
     },
     {
         "id" : 3,
-        "name" : "Platos",
+        "name" : "chichas",
         "image" : null
     }
 ]

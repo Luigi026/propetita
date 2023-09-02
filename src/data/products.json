@@ -1,11 +1,20 @@
 [
    {
-      "id": "69abb524-6ba7-490a-9877-fa00712c9d49",
-      "title": "rocoto",
-      "category": "Picantes",
-      "price": 100,
+      "id": 2,
+      "name": "lomo saltado montado",
+      "category": "platos",
+      "price": 1500,
       "discount": 10,
-      "description": "pica demaciado",
-      "image": null
+      "description": "plato de la casa con huevo",
+      "image": "lomosaltado.jpg"
+   },
+   {
+      "id": 3,
+      "name": "chicha de jora",
+      "category": "chichas",
+      "price": 1000,
+      "discount": 5,
+      "description": "Especial para arroz con pollo",
+      "image": "orenago.jpg"
    }
 ]

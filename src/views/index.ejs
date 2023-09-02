@@ -1,99 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
+<%- include('partials/head', { title : 'HOME'}) %>
 <body> 
   <%- include('partials/header') %>
   <%- include('partials/carousel_swiper') %>
     <main class="main">
         <section class="main__section">
-            <article class="main__section__article" data-aos="zoom-in-right">
-                <img src="/img/119047560_123870872509637_2988998959033757686_n.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article" data-aos="zoom-in-up">
-                <img src="/img/oregano-r_17072020-dan_48341-047e4a56f73768373d15965667453592-480-0.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article" data-aos="zoom-in-left">
-                <img src="/img/118976613_416922119273770_4877251017455572627_n.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article" data-aos="zoom-in-right">
-                <img src="/img/pimienta1-9d8f21fb8e7d8797f716000971633031-480-0.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article" data-aos="zoom-in-left">
-                <img src="/img/119047560_123870872509637_2988998959033757686_n.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>    
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article" data-aos="zoom-in-up">
-                <img src="/img/oregano-r_17072020-dan_48341-047e4a56f73768373d15965667453592-480-0.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>    
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article " data-aos="zoom-in-down">
-                <img src="/img/118976613_416922119273770_4877251017455572627_n.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>    
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
-            <article class="main__section__article" data-aos="zoom-in-right">
-                <img src="/img/pimienta1-9d8f21fb8e7d8797f716000971633031-480-0.jpg" alt="">
-                <div>
-                    <h2>$1000</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>    
-                <div class="main__section__article__div--buttons">
-                    <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
-                    <button><i class="fa-solid fa-eye"></i><a href="/products/detail">ver más</a></button>
-                </div>
-            </article>
+            <% productsEspecias.forEach(product => { %>
+                <%- include('partials/productCart',{ ...product, toThousand }) %>
+            <% }) %>
+            
+            <% productsPlatos.forEach(product => { %>
+                <%- include('partials/productCart',{ ...product, toThousand }) %>
+            <% }) %>
+
+            <% productsChichas.forEach(product => { %>
+                <%- include('partials/productCart',{ ...product, toThousand }) %>
+            <% }) %>
         </section>
         <section class="carousel__platos">
             <div class="swiper mySwiper2">
@@ -140,8 +63,8 @@
                 </div>
                   <div class="swiper-slide">
                     <div class="card">
-                        <a href="/products/detail"><img class="card-img-top" src="/img/products/carta.webp" alt=""></a>
-                        <div class="car-body">
+                        <a href="/products/detail"><img class="card-img-top" src="/img/products/plato4.jpg" alt=""></a>
+                        <div class="card-body">
                             <p class="card-title" >platos..</p>
                         </div>
                     </div>
@@ -153,41 +76,7 @@
         </section>
         <a class="home__main--whatsapp" href=""><img width="80px" src="/img/whatsapp-icon.png" alt=""></a>   
     </main>
-    <footer>
-        <section class="footer__section">
-            <article class="footer__section__article">
-                <div class="footer__section__article__div2">
-                    <p>Seguinos en:</p>
-                    <div>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
-                </div>
-                <div class="footer__section__article__div1">
-                    <img src="/img/logopetita.jpg" alt="">
-                </div>
-                <div class="footer__section__article__div3">
-                    <h5><a href="">contacto</a></h5>
-                    <h5><a href="">ubicacion</a></h5>
-                </div>
-            </article>
-        </section>
-    </footer>
-    <!-- boostrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-     <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!-- Aos -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- custom -->
-    <!-- <script src="/js/carousel_w3school.js"></script> -->
-    <script src="/js/carousel_swiper.js"></script>
-    <script src="/js/carousel_swiper2.js"></script>
-    <script>
-        AOS.init();
-      </script>
+    <%- include('partials/footer') %>
+   
 </body>
 </html>

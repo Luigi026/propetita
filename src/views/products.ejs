@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head'/* , {title: 'Todos los productos'} */) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+	<!-- todos los productos -->
+    
+            
+                <div class="container products-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="products-title">Todos los productos</h2>
+                        </div>
+                    <% products.forEach(product => { %>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <%- include('partials/productCart', {
+                                ...product,
+                                toThousand
+                            }) %>
+                        </div>
+                    <% }) %>
+                    </div>
+                </div>
+            
+        
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+  
+      <!-- boostrap -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      <!-- swiper -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+     <!-- Aos -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <!-- custom -->
+     <!-- <script src="/js/carousel_w3school.js"></script> -->
+     <script src="/js/carousel_swiper.js"></script>
+     <script src="/js/carousel_swiper2.js"></script>
+     <script>
+         AOS.init();
+       </script>
+</body>	
+</html>

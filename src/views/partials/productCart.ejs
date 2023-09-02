@@ -1,0 +1,17 @@
+<article class="main__section__article" data-aos="zoom-in-right">
+    <img src="/img/products/<%= image || 'default-image.png' %>" alt="">
+    <div>
+        <h1><%= name %></h1>
+        <h2>$<%= toThousand((price - (price * discount / 100)).toFixed(0)) %></h2>
+        <% if (discount) { %>
+            <span><%= discount %> % OFF</span>
+        <% } %>
+        <p><%= description %></p>
+    </div>
+    <div class="main__section__article__div--buttons">
+        <button><i class="fa-solid fa-truck-fast"></i><a href="">enviarme</a></button>
+        <button><i class="fa-solid fa-eye"></i><a href="/products/detail/<%= id %>">ver más</a></button>
+    </div>
+</article>
+
+
